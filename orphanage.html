@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <title>Nome do Orfanato</title>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="./public/images/favicon.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="/public/styles/page-orphanage.css" />
+    <link rel="stylesheet" href="/public/styles/buttons.css" />
+    <link rel="stylesheet" href="/public/styles/sidebar.css" />
+    <link rel="stylesheet" href="/public/styles/map.css" />
+
+    <link rel="stylesheet" href="/public/styles/animations.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page-orphanage">
+      <aside class="animate-right sidebar">
+        <img src="./public/images/map-marker.svg" alt="Happy" />
+
+        <footer>
+          <button onclick="history.back()">
+            <img src="./public/images/arrow-back.svg" alt="voltar" />
+          </button>
+        </footer>
+      </aside>
+
+      <main class="animate-appear with-sidebar">
+        <div class="orphanage-details">
+          <img src="./public/images/pontocoleta1.jpeg" alt="Ponto de coleta" />
+          <div class="images">
+            <button onclick="selectImage(event)" class="active" type="button">
+              <img
+                src="https://source.unsplash.com/random/?asset"
+                alt="Ponto de coleta Home"
+              />
+            </button>
+            <button onclick="selectImage(event)" type="button">
+              <img
+                src="https://source.unsplash.com/random/?material"
+                alt="Ponto de coleta Home"
+              />
+            </button>
+            <button onclick="selectImage(event)" type="button">
+              <img
+                src="https://source.unsplash.com/random/?material,wood"
+                alt="Ponto de coleta Home"
+              />
+            </button>
+            <button onclick="selectImage(event)" type="button">
+              <img
+                src="https://source.unsplash.com/random/?build"
+                alt="Ponto de coleta Home"
+              />
+            </button>
+            <button onclick="selectImage(event)" type="button">
+              <img
+                src="https://source.unsplash.com/random/?field"
+                alt="Ponto de coleta Home"
+              />
+            </button>
+            <button onclick="selectImage(event)" type="button">
+              <img
+                src="https://source.unsplash.com/random?id=6"
+                alt="Ponto de coleta Home"
+              />
+            </button>
+          </div>
+
+          <div class="orphanage-details-content">
+            <h1>Ponto de Coleta Exemplo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
+
+            <div class="map-container">
+              <div id="map" class="mapid"></div>
+              <footer>
+                <a href="">Ver rotas no Google Map</a>
+              </footer>
+            </div>
+
+            <hr />
+
+            <h2>Horarios de Funcionamento</h2>
+            <p>
+              Nostrud veniam quis eiusmod laboris ipsum et anim occaecat culpa
+              excepteur.
+            </p>
+
+            <div class="open-details">
+              <div class="hour">
+                <img src="./public/images/clock.svg" alt="Hórarios" />
+                07:00h às 18:30h
+              </div>
+              <div class="open-on-weekends">
+                <img src="./public/images/info.svg" alt="Informações" />
+                Abrimos fins de semana e feriados.
+              </div>
+            </div>
+
+            <button class="primary-button" type="button">
+              <img src="./public/images/whatsapp.svg" alt="whatsapp" />
+              Chamar no Whatsapp
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/public/scripts/page-orphanage.js"></script>
+  </body>
+</html>

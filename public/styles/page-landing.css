@@ -1,0 +1,111 @@
+#page-landing {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(329.54deg, #29b6d1 0%, #3b76bb 100%);
+  display: flex;
+}
+
+#container {
+  margin: auto;
+  width: min(90%, 112rem);
+}
+
+.location,
+h1,
+.visit p {
+  height: 16vh;
+  font-family: "Outfit", sans-serif;
+}
+
+.location strong {
+  font-size: 2.1rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.location p {
+  font-size: 1.7rem;
+  font-family: "Outfit", sans-serif;
+}
+
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background: #ffd666;
+  border: none;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: 0.2ms;
+  animation-delay: 250ms;
+}
+
+.visit a:hover {
+  background: #96feff;
+}
+
+/* desktop version */
+
+@media (min-width: 768px) {
+  #container {
+    padding: 5rem 2rem;
+    /*shorthand background: image repeat position / size */
+    background: url(../images/landing-ilustra.svg) no-repeat 80% /
+      clamp(32rem, 48vw, 56rem);
+    background-position: right center;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+    text-align: initial;
+  }
+
+  .location {
+    text-align: right;
+    font-size: 2.4rem;
+  }
+
+  main h1 {
+    font-size: clamp(4rem, 8vw, 8.4rem);
+    font-weight: bold;
+    width: min(300px, 80%);
+    line-height: 0.88;
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
+  }
+
+  .visit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .visit p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: clamp(20rem, 20vw, 30rem);
+  }
+
+  .visit a {
+    margin: initial;
+  }
+}

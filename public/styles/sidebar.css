@@ -1,0 +1,38 @@
+aside.sidebar {
+  position: fixed;
+  height: 620px;
+  padding: 3.2rem 2.4rem; /*32px 24px*/
+  background: #15c3d6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.8rem;
+}
+
+aside.sidebar footer button {
+  width: 48px;
+  height: 48px;
+  top: 740px;
+  left: 24px;
+  background: hsl(61, 83%, 49%);
+  border: none !important;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-center 0.2s;
+}
+
+aside.sidebar footer button:hover {
+  background: hsl(61, 67%, 77%);
+}
+
+.with-sidebar {
+  padding-left: 156px;
+}
+
+main {
+  flex: 1;
+}
