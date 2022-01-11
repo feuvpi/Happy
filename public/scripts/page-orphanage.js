@@ -46,10 +46,16 @@ L.marker([51.5, -0.09], { icon }).addTo(map)
         
         //remover todas as classes .active
         const button = event.currentTarget;
+
         console.log(button);
+
+        //remover todas as clases .active
         const buttons = document.querySelectorAll(".images button")
-        buttons.forEach((button) => {button.classList.remove("active");
-        });
+        buttons.forEach(removeActiveClass);
+
+        function removeActiveClass(button) {
+            button.classList.remove("active");
+        }
         
         
         //selecionar a imagem clicada
