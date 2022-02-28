@@ -6,7 +6,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
 //create icon
 const icon = L.icon({
-  iconUrl: "./public/images/map-marker.svg",
+  iconUrl: "/images/map-marker.svg",
   iconSize: [58, 68],
   iconAnchor: [29, 68],
   //popupAnchor: [0,-65]
@@ -106,5 +106,18 @@ function toggleSelect(event) {
   let value = event.target.attributes.value.value;
 
   //update hidden input with selected value
-  document.querySelector("[name=OpenWeekends").value = value;
+  document.querySelector("[name=OpenWeekends]").value = value;
+}
+
+//FAZER VERIFICAÇÃO SE TODOS OS CAMPOS DO FORMULARIO FORAM PREENCHIDOS
+function validade(event){
+  
+  
+  //Validar se lat e lng estão preenchidos
+  const needLatAndLong = true;
+  if(needLatAndLong) {
+    event.preventDefault(); //Não enviar o formulario
+    alert('Selecione um ponto no mapa!')
+  }
+
 }

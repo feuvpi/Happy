@@ -1,0 +1,115 @@
+<html lang="pt_BR">
+  <head>
+    <title>{{orphanage.name}}</title>
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/images/favicon.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="/styles/page-orphanage.css" />
+    <link rel="stylesheet" href="/styles/buttons.css" />
+    <link rel="stylesheet" href="/styles/sidebar.css" />
+    <link rel="stylesheet" href="/styles/map.css" />
+
+    <link rel="stylesheet" href="/styles/animations.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page-orphanage">
+      <aside class="animate-right sidebar">
+        <img src="/images/map-marker.svg" alt="Happy" />
+
+        <footer>
+          <button onclick="history.back()">
+            <img src="/images/arrow-back.svg" alt="voltar" />
+          </button>
+        </footer>
+      </aside>
+
+      <main class="animate-appear with-sidebar">
+        <div class="orphanage-details">
+          <img src="{{orphanage.firstImage}}" alt="{{orphanage.name}}"/>
+          <div class="images">
+            {{#each orphanage.firstImage}}
+              <button onclick="selectImage(event)" class="active" type="button">
+                <img
+                  src="{{this}}"
+                  alt="{{orphanage.name}}"
+                />
+              </button>
+            {{/each}}
+          </div>
+
+          <div class="orphanage-details-content">
+            <h1>{{orphanage.name}}<h1>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
+
+            <div class="map-container">
+              <div id="map" class="mapid"></div>
+              <span data-lat="{{orphanage.lat}}" data-lng="{{orphanage.lng}}"></span>
+              <footer>
+                <a href="https://maps.google.com/mobile?q={{orphanage.lat}},{{orphanage.lng}}&z=15">Ver rotas no Google Map</a>
+              </footer>
+            </div>
+
+            <hr />
+
+            <h2>Horarios de Funcionamento</h2>
+            <p>
+              {{orphanage.instructions}}
+            </p>
+
+            <div class="open-details">
+              <div class="hour">
+                <img src="/images/clock.svg" alt="Hórarios" />
+                {{orphanage.opening_hours}}
+              </div>
+
+              {{#if orphanage.open_on_weekends}}
+                <div class="open-on-weekends">
+                <img src="/images/info.svg" alt="Informações" />
+                Abrimos fins de semana e feriados.
+              </div>
+              {{else}}
+                <div class="open-on-weekends closed">
+                <img src="/images/info-red.svg" alt="Informações"/>
+                Não abrimos aos finais de semana e feriados.
+                </div>
+              {{/if}}
+
+            </div>
+
+            <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{orphanage.whatsapp}}" target="_blank" class="primary-button" type="button">
+              <img src="/images/whatsapp.svg" alt="whatsapp" />
+              Chamar no Whatsapp
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/scripts/page-orphanage.js"></script>
+  </body>
+</html>
+
+
+https://api.whatsapp.com/send?l=pt_BR&phone=%20target=

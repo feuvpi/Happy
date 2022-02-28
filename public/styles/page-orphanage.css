@@ -204,9 +204,15 @@ main {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.open-details .open-on-weekends.closed {
+  background: linear-gradient(154.16deg, hsla(0, 66%, 78%, 0.863) 7.85%, #ff4a4aa2 91.03%);
+  border: 1px solid #FF4A4A;
+}
+
 /* 
 
 map-container .leaflet-container {
+  
   border-bottom: 1px solid #e6f7fb;
   border-radius: 2rem;
 }

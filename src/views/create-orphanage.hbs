@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./public/images/favicon.png" />
+    <link rel="icon" href="/images/favicon.png" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -17,12 +17,12 @@
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""
     ></script>
-    <link rel="stylesheet" href="/public/styles/page-create-orphanage.css" />
-    <link rel="stylesheet" href="/public/styles/sidebar.css" />
-    <link rel="stylesheet" href="/public/styles/map.css" />
-    <link rel="stylesheet" href="/public/styles/animations.css" />
-    <link rel="stylesheet" href="/public/styles/form.css" />
-    <link rel="stylesheet" href="/public/styles/buttons.css" />
+    <link rel="stylesheet" href="/styles/page-create-orphanage.css" />
+    <link rel="stylesheet" href="/styles/sidebar.css" />
+    <link rel="stylesheet" href="/styles/map.css" />
+    <link rel="stylesheet" href="/styles/animations.css" />
+    <link rel="stylesheet" href="/styles/form.css" />
+    <link rel="stylesheet" href="/styles/buttons.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap"
       rel="stylesheet"
@@ -31,17 +31,17 @@
   <body>
     <div id="page-create-orphanage">
       <aside class="animate-right sidebar">
-        <img src="./public/images/map-marker.svg" alt="Happy" />
+        <img src="/images/map-marker.svg" alt="Happy" />
 
         <footer>
           <button onclick="history.back()">
-            <img src="./public/images/arrow-back.svg" alt="voltar" />
+            <img src="/images/arrow-back.svg" alt="voltar" />
           </button>
         </footer>
       </aside>
 
       <main class="animate-appear with-sidebar">
-        <form action="">
+        <form action="save-orphanage" method="post">
           <fieldset>
             <legend>Dados</legend>
 
@@ -81,17 +81,18 @@
                   <input
                     name="images"
                     placeholder="Cole o link da foto aqui."
+                    type="url"
                   />
                   <span onclick="deleteField(event)"
                     ><img
-                      src="./public/images/remove-file.svg"
+                      src="/images/remove-file.svg"
                       alt="Remover foto"
                   /></span>
                 </div>
               </div>
 
               <button type="button" onclick="addPhotoField()">
-                <img src="./public/images/plus2.svg" alt="Adicionar Imagem"/>
+                <img src="/images/plus2.svg" alt="Adicionar Imagem"/>
               </button>
             </div>
           </fieldset>
@@ -125,6 +126,6 @@
       </main>
     </div>
 
-    <script src="/public/scripts/page-create-orphanage.js"></script>
+    <script src="/scripts/page-create-orphanage.js"></script>
   </body>
 </html>
