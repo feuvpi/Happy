@@ -22,8 +22,9 @@
   
   <p align="center">
   
-  ### 💻 TECH
+  ### 💻 TECHNOLOGIES
   
 - [Node.js](https://nodejs.org/en/)
 - [React](https://reactjs.org)
+- [SQLite](https://www.sqlite.org/)
   </p>
