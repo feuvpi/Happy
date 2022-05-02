@@ -24,7 +24,9 @@
   
   ### 💻 TECHNOLOGIES
   
+- [JavaScript](https://www.javascript.com/) 
 - [Node.js](https://nodejs.org/en/)
-- [React](https://reactjs.org)
+- [Express](https://expressjs.com/)
+- [Handlebars](https://handlebarsjs.com/)
 - [SQLite](https://www.sqlite.org/)
   </p>
